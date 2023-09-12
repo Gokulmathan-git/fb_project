@@ -39,7 +39,9 @@ app.use((req, res, next) => {
 //   }
 // });
 
-
+app.get('/',(req,res)=>{
+  res.send("hello world !!!!!");
+});
 
 const { create } = require('./handlers/create')
 app.post('/create', create);
