@@ -8,6 +8,8 @@ exports.create = async (req , res) =>{
           lastname: lastname
         };
         const response = db.collection("user").doc(id).set(info);
+
+        const length = Object.keys(req.body).length;
         return res.status(200).send(response);
     
       } catch (error) {
